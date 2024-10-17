@@ -1,0 +1,649 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("assets/img/background.png");
+  font-family: "Roboto", sans-serif;
+  
+}
+
+
+.header {
+    display: flex;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+}
+main {
+    flex: 1 1 auto;
+}
+
+.head-block{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+ 
+}
+
+.head-title {
+  font-family: "Gabriela";
+  margin: 0;
+}
+
+.main-container.hide {
+    transition: 0.5s ease-in-out;
+    display: none;
+}
+
+.result-container.hide {
+display: none;
+}
+
+.result-container{
+    display: flex;
+    height: 20rem;
+    margin-left: auto;
+    align-self: center;
+    margin-right: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.result-wrap{
+    display: flex;
+    flex: 1 1 auto;
+
+    
+}
+
+.reset-btn {
+    margin: 0 auto;
+    background-color: #faebd7;
+    border-radius: 10px;
+    border: 1px solid #ddc8af;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    width: 40%;
+    height: 3rem;
+    transition: 0.5s ease-in-out;
+}
+
+.reset-btn:hover {
+    background-color: #e6bc86;
+}
+
+.reset-btn.hide {
+    display: none;
+}
+
+.result-title {
+    font-family: "Gabriela";
+    margin: 0;
+}
+
+.result-text{
+    text-align: center;
+}
+
+.head-score-contain{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+} 
+
+
+.nav-container {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 35px;
+    border-radius: 10px;
+    justify-content:center;
+    background-color: bisque;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+   
+}
+
+.nav-item {
+padding: 15px;
+cursor: pointer;
+}
+
+.nav-item.active{
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.unknown-bird-block{
+    display: flex;
+    width: fit-content;
+  
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 28px;
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+    
+
+}
+
+.unknown-bird-pic{
+    margin: 30px;
+    border-radius: 20px;
+    width: 200px;
+    height: 155px;
+}
+
+.unknown-bird-content{
+    display: flex;
+    width: 43rem;
+    flex-direction: column;
+}
+
+.unknown-bird-name{
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #000;
+
+    
+    
+}
+
+.audio-block{
+    display: flex;
+    padding-top: 10px;
+    gap: 10px;
+    
+}
+
+.audiobar{
+    width: 100%
+}
+
+.volume-time-block{
+    display: flex;
+}
+
+.playbutton{
+    background-image: url(./assets/svg/play.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    
+
+}
+
+.playbutton:hover {
+    opacity: .75;
+}
+
+.pausebutton {
+    background-image: url(./assets/svg/pause.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+}
+
+.pausebutton:hover {
+    opacity: .75;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: #000;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.progress {
+    height: 5px;
+    background: antiquewhite;
+    width: 0;
+}
+
+.durationTime{
+   text-align: right;
+}
+
+.currentTime{
+    display: flex;
+    text-align: left;
+    align-content: center;
+}
+
+input[type=range]  {
+    width: 60px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    overflow: hidden;
+    height: 7px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    border-radius: 10px;
+    height: 7px;
+    background-color: #000;
+  }
+
+input[type=range]::-webkit-slider-thumb {
+    background: bisque;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 7px;
+    -webkit-appearance: none;
+}
+
+.audio-volume{
+    align-self: center;
+}
+
+.about-bird-block{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.about-bird-pic{
+    margin: 20px;
+    border-radius: 20px;
+    width: 200px;
+    height: 155px;
+}
+
+.about-bird-content {
+    display: flex;
+    width: 20rem;
+    flex-direction: column;
+}
+
+.about-bird-name{
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+}
+
+.about-bird-lat-name {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+
+.about-bird-default {
+    width: 35rem;
+}
+
+.about-bird-default.hide {
+    display: none;
+}
+
+.select-bird-indicator.correct {
+    transition: 0.5s all ease-in-out;
+    background: rgb(31, 189, 17);
+}
+.select-bird-indicator.wrong {
+    transition: 0.5s all ease-in-out;
+    background: rgb(177, 23, 12);
+}
+
+
+.about-bird-body{
+    display: none;
+}
+
+.about-bird-body.show {
+    display: flex;
+}
+
+.about-bird-description{
+    display: none;
+}
+
+.about-bird-description.show{
+    display: flex;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.about-bird-volume-time-block{
+    display: flex;
+}
+
+.gamefield-section{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.select-bird-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.select-bird-indicator{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(116, 116, 116);
+}
+
+.select-bird-item{
+    display: flex;
+    width: 21rem;
+    align-items: center;
+    gap: 15px;
+    padding-top: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 17px;
+    border: 1px solid #faebd7;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.select-bird-item:hover {
+    background-color: #faebd7;
+}
+
+.next-lvl-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: bisque;
+    border-radius: 10px;
+    border: 1px solid #faebd7;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    width: 50%;
+    height: 2rem;
+    transition: 0.5s ease-in-out;
+}
+
+.next-lvl-btn:hover {
+    background-color: #faebd7;
+}
+
+footer {
+    display: flex;
+}
+
+footer {
+    flex: 0 0 auto
+}
+
+.footer-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    
+  align-items: center;
+  line-height: 50px;
+  background-color: bisque;
+  
+  }
+  
+  .footer-link {
+    color: rgb(116, 116, 116);;
+    text-decoration: none;
+  }
+  a {
+    font-family: 'Roboto', sans-serif;
+   
+    font-size: 18px;
+    color: #fff;
+    padding-right: 20px;
+  }
+  span {
+    width: fit-content;
+  }
+  a:hover {
+    color: #e0b886;
+  }
+  
+  .footer-data {
+    display: flex;
+    padding-left: 20px;
+    gap: 20px;
+  
+  }
+
+  .start-title {
+    font-family: "Gabriela";
+    margin: 0;
+    font-size: 82px;
+  }
+  .start-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+.start-btn {
+  margin: 0 auto;
+  margin-top: 25px;
+  background-color: #faebd7;
+  border-radius: 10px;
+  border: 1px solid #ddc8af;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  width: 40%;
+  height: 3rem;
+  transition: 0.5s all ease-in-out;
+}
+
+.start-btn:hover {
+  background-color: #e6bc86;
+}
+
+.start-subtext{
+    font-size: 20px;
+}
+
+
+@media (max-width: 1000px){
+    .footer-container{
+      
+    }
+
+    .unknown-bird-content{
+        width: 20rem;
+    }
+    
+    .nav-container{
+        gap: 0px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .unknown-bird-block{
+        width: 100%;
+        padding-right: 0px;
+        justify-content: center;
+    }
+
+    .about-bird-default {
+        
+        align-self: center;
+        text-align: center;
+        width: 20rem;
+        
+    }
+
+    .gamefield-section{
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .about-bird-block{
+        width: auto;
+        justify-content: center;
+    }
+
+    .about-bird-body{
+        justify-content: center;
+    }
+
+    .about-bird-description{
+        margin: 0 auto;
+    }
+
+    .select-bird-item{
+        width: inherit;
+    }
+
+    .select-bird-block{
+        width: auto;
+    }
+    .next-lvl-btn {
+        margin-bottom: 30px;    
+    }
+}
+
+@media (max-width: 700px){
+    .footer-container{
+        flex-direction: column;
+    }
+
+   
+
+    .head-block{
+        margin-bottom: 15px;
+    }
+
+    .nav-container{
+        flex-direction: column;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .audio-block{
+        margin-bottom: 20px;
+    }
+
+    .unknown-bird-block{
+        flex-direction: column;
+    }
+
+    .unknown-bird-pic {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .unknown-bird-content{
+        align-self: center;
+    }
+
+    .about-bird-default {
+        
+        align-self: center;
+        text-align: center;
+        width: 10rem;
+        
+    }
+
+    .about-bird-body{
+        flex-direction: column;
+    }
+
+    .about-bird-content{
+        align-self: center;
+    }
+
+    .about-bird-pic{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .about-bird-description{
+        margin-top: 20px;
+    }
+
+    .reset-btn{
+        font-size: 18px;
+        width: 70%;
+        height: 4rem;
+    }
+
+    .result-container{
+        width: 20rem;
+        height: 24rem;
+    }
+
+    .start-title {
+        font-size: 75px;
+      }
+
+    .start-subtext{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .next-lvl-btn {
+        height: 3rem;
+    }
+}
+

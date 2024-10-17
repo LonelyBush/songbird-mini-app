@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/svg/Icons8-Ios7-Animals-Sparrow.ico">
+    <link rel ="stylesheet" href = "style.css">
+    <title>SongBird</title>
+</head>
+<body>
+    <div class = "main-container">
+        <header>
+            <div class ="head-block">
+            <h1 class ="head-title">SongBird</h1>
+            <div class = "head-score-contain">
+                Score: <p class = "point">0</p>
+            </div>
+            </div>
+            <nav>
+                <ul class ="nav-container">
+                    <li id ="1" class = "nav-item">Разминка</li>
+                    <li id ="2" class = "nav-item">Воробьиные</li>
+                    <li id ="3" class = "nav-item">Лесные птицы</li>
+                    <li id ="4" class = "nav-item">Певчие птицы</li>
+                    <li id ="5" class = "nav-item">Хищные птицы</li>
+                    <li id ="6" class = "nav-item">Морские птицы</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class = "unknown-bird-block">
+                <img class = "unknown-bird-pic" src = "./assets/img/unknown-bird.jpg" alt ="unknown-bird-pic">
+                <div class = "unknown-bird-content">
+                    <h2 class = "unknown-bird-name">***</h2>
+                    <div class="audio-block">
+                        <audio id ="unknown-bird" preload="metadata" src =""></audio>
+                           <button class ="playbutton"></button>
+                           <div class = "audiobar">
+                           <div class = "durationTime">0:00</div>
+                           <div class = "progress-bar">
+                               <div class ="progress"></div>
+                           </div>
+                           <div class = "volume-time-block">
+                           <div class = "currentTime">0:00
+                           </div>
+                           <input class = "audio-volume" type = "range"  min = "0" max =" "value = "100">
+                            </div>
+                           </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "gamefield-section">
+                <div class = "about-bird-block">
+                    <div class ="about-bird-default">Послушайте плеер<br> Выберите птицу из списка</div>
+                    <div class = "about-bird-body">
+                    <img class = "about-bird-pic" src = "./assets/img/unknown-bird.jpg" alt ="unknown-bird-pic">
+                    <div class = "about-bird-content">
+                        <h2 class = "about-bird-name">***</h2>
+                        <p class = "about-bird-lat-name">Corvus corax</p>
+                        <div class="audio-block">
+                            <audio id ="current-bird" preload="metadata" src =""></audio>
+                               <button class ="playbutton"></button>
+                               <div class = "audiobar">
+                               <div class = "durationTime">0:00</div>
+                               <div class = "progress-bar">
+                                   <div class ="progress"></div>
+                               </div>
+                               <div class = "volume-time-block">
+                                <div class = "currentTime">0:00
+                                </div>
+                                <input class = "audio-volume" type = "range"  min = "0" max =" "value = "100">
+                                 </div>
+                               </div>
+                        </div>
+                    </div>
+                    </div>    
+                    <div class = "about-bird-description"> 
+                        В щебетании синиц различают более 40 различных звуковых сочетаний. Поют они практически круглый год, немного затихая только зимой. Синицы настоящие санитары леса. Одна пара синиц в период гнездования оберегает от вредителей десятки деревьев.
+                    </div>
+                </div>
+                <div class = "select-bird-block">
+                    <ul class = "select-bird-list">
+                        <li class="select-bird-item"><div class="select-bird-indicator"></div></li>
+                        <li class="select-bird-item"><div class="select-bird-indicator"></div></li>
+                        <li class="select-bird-item"><div class="select-bird-indicator"></div></li>
+                        <li class="select-bird-item"><div class="select-bird-indicator"></div></li>
+                        <li class="select-bird-item"><div class="select-bird-indicator"></div></li>
+                        <li class="select-bird-item"><div class="select-bird-indicator"></div></li>
+                    </ul>
+                </div>
+            </div>
+        <button class = "next-lvl-btn">Следующий уровень!</button>
+            
+
+        </main>
+        <footer>
+            
+                <div class="footer-container">
+                  <div class = "footer-data">
+                    <span>©</span>
+                    <span>2022</span>
+                    <span><a href = "https://github.com/LonelyBush" class = "footer-link">github</a></span>
+                  </div>
+                  <div>
+                      <a href = "https://rs.school/js/" class = "footer-link">Rolling Scopes School</a>
+                  </div>
+                </div>
+            
+        </footer>
+    </div>
+    <script type="module" src = "./components/script.js"></script>
+</body>
+</html>
